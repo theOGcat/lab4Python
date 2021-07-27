@@ -1,29 +1,64 @@
 #LorryWei
 #104952078
 
-#Assignment1 Question1
-#Example Display the equivalent amount of miles convert from distance in kilometres.
+#Assignment3 Question1
+#Example of using function randrange(). Simulates roll of two dices.
+#The random module function are given below. The random module contains some very useful functions
+#one of them is randrange()
+#randrange(start,stop)
 
 
 
 #PsuedoCode Begin:
 #
-#Obtain the # of kilometres by the user
-#Convert value returned by the input() function from a string into an integer using the int() function
-#Now convert this value into miles - this can be done by Multiplying the kilometres by 0.6214
-#print out a message telling the user what the kilometres are in miles.
-
+#import randrange function from random.
+#define funtion that print out each dice.
+#in the main function. using randrange(1,7) to simulate giving a random number between 1 and 7
 #
 #PsuedoCode End.
 
+from random import randrange
+import random
 
-#prompt the input required by the user and store in the valuekilo int variable
-temp = input("Please enter the kilometres to be converted. ")
-valuekilo = int(temp)
+def numDice(dice):
+    if dice==1:
+        print('+-------+')
+        print('|       |')
+        print('|   *   |')
+        print('|       |')
+        print('+-------+')
+    elif dice==2:
+        print('+-------+')
+        print('|   *   |')
+        print('|       |')
+        print('|   *   |')
+        print('+-------+')
+    elif dice==3:
+        print('+-------+')
+        print('|      *|')
+        print('|   *   |')
+        print('|*      |')
+        print('+-------+')
+    elif dice==4:
+        print('+-------+')
+        print('|*     *|')
+        print('|       |')
+        print('|*     *|')
+        print('+-------+')
+    elif dice==5:
+        print('+-------+')
+        print('|*     *|')
+        print('|   *   |')
+        print('|*     *|')
+        print('+-------+')
+    elif dice==6:
+        print('+-------+')
+        print('| * * * |')
+        print('|       |')
+        print('| * * * |')
+        print('+-------+')
 
-#Using multiplying the kilometre to convert
-valuemiles = valuekilo * 0.6214
-#print all the results.
-#Using string formatter to format the output exactly three digits.
-valuemiles = round(valuemiles,3)
-print("The equivalent miles is:","%.3f"%valuemiles)
+
+for x in range(0,2):
+    dice=random.randrange(1,7)
+    numDice(dice)
